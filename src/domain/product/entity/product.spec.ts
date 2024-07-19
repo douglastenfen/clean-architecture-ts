@@ -15,13 +15,13 @@ describe('Product unit tests', () => {
 
   it('should throw error when price is less than zero', () => {
     expect(() => new Product('1', 'product', -1)).toThrow(
-      'product: Price must be greater than zero'
+      'product: price must be greater than or equal to 0'
     );
   });
 
   it('should throw error when ID, name and price are invalid', () => {
     expect(() => new Product('', '', -1)).toThrow(
-      'product: ID is required, product: Name is required, product: Price must be greater than zero'
+      'product: ID is required, product: Name is required, product: price must be greater than or equal to 0'
     );
   });
 
